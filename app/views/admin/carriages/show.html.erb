@@ -1,0 +1,22 @@
+<h1><%= t('.title') %></h1>
+<table class="flat-table">
+  <thead>
+  <th><%= t('.type') %></th>
+  <th><%= t('admin.carriages.index.bottom_places') %></th>
+  <th><%= t('admin.carriages.index.top_places') %></th>
+  <th><%= t('admin.carriages.index.side_bottom_places') %></th>
+  <th><%= t('admin.carriages.index.side_top_places') %></th>
+  <th><%= t('admin.carriages.index.sedentary_places') %></th>
+  </thead>
+  <tbody>
+  <tr>
+    <td><%= @carriage.name %></td>
+    <td><%= @carriage.bottom_places %></td>
+    <td><%= @carriage.top_places %></td>
+    <td><%= @carriage.side_bottom_places %></td>
+    <td><%= @carriage.side_top_places %></td>
+    <td><%= @carriage.sedentary_places %></td>
+  </tr>
+  </tbody>
+</table>
+<%= link_to t('common.back'), admin_train_carriages_path(@train), class: 'link-bt' %>

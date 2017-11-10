@@ -1,0 +1,35 @@
+<ul class="main-menu">
+  <li><%= link_to t('.main'), root_path, class: 'root-item' %></li>
+  <% if user_signed_in? %>
+      <li><%= link_to t('.exit'), destroy_user_session_path, method: :delete, class: 'root-item' %></li>
+      <li> <%= link_to t('.my_tickets'), tickets_path, class: 'root-item' %></li>
+      <% if current_user.admin? %>
+          <li>
+            <%= link_to t('.stations'), admin_railway_stations_path, class: 'root-item' %>
+            <ul>
+              <li><%= link_to t('admin.railway_stations.create_station'), new_admin_railway_station_path %></li>
+            </ul>
+          </li>
+          <li>
+            <%= link_to t('.routes'), admin_routes_path, class: 'root-item' %>
+            <ul>
+              <li><%= link_to t('admin.routes.new_route'), new_admin_route_path %></li>
+            </ul>
+          </li>
+          <li>
+            <%= link_to t('.trains'), admin_trains_path, class: 'root-item' %>
+            <ul>
+              <li><%= link_to t('admin.trains.new_train'), new_admin_train_path %></li>
+            </ul>
+          </li>
+          <li>
+            <%= link_to t('.tickets'), admin_tickets_path, class: 'root-item' %>
+            <ul>
+              <li><%= link_to t('admin.tickets.new_ticket'), new_admin_ticket_path %></li>
+            </ul>
+          </li>
+      <% end %>
+  <% else %>
+      <li><%= link_to t('.log_in'), new_user_session_path, class: 'root-item' %></li>
+  <% end %>
+</ul>

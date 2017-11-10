@@ -1,0 +1,55 @@
+<h1><%= t('.title') %></h1>
+
+<%= render 'common/errors', res: @ticket %>
+
+<table class="mini-table">
+  <thead>
+  <tr>
+    <th><%= t('tickets.train_number') %></th>
+    <th colspan="2"><%= t('tickets.route') %></th>
+    <th><%= t('tickets.departure') %></th>
+    <th><%= t('tickets.departure_time') %></th>
+    <th><%= t('tickets.arrival') %></th>
+    <th><%= t('tickets.arrival_time') %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><%= @full_params[:train_number] %></td>
+    <td><%= @full_params[:route_number] %></td>
+    <td><%= @full_params[:route_name] %></td>
+    <td><%= @full_params[:first_station_title] %></td>
+    <td><%= @full_params[:departure] %></td>
+    <td><%= @full_params[:last_station_title] %></td>
+    <td><%= @full_params[:arrival] %></td>
+  </tr>
+  </tbody>
+</table>
+
+<%= form_for @ticket, url: {action: :create}, html: {class: 'form-style'} do |form| %>
+    <ul>
+    <%= form.hidden_field :train_id, {value: @full_params[:train_id]} %>
+    <%= form.hidden_field :first_station_id, {value: @full_params[:first_station_id]} %>
+    <%= form.hidden_field :last_station_id, {value: @full_params[:last_station_id]} %>
+      <li>
+        <table>
+          <tr>
+            <td><%= form.label :first_name %></td>
+            <td><%= form.label :last_name %></td>
+            <td><%= form.label :passport_number %></td>
+          </tr>
+          <tr>
+            <td><%= form.text_field :first_name, class: 'field-style', minlength: 3, maxlength: 24, required: true %></td>
+            <td><%= form.text_field :last_name, class: 'field-style', minlength: 3, maxlength: 24, required: true %></td>
+            <td><%= form.number_field :passport_number, class: 'field-style', min: 0, required: true %></td>
+          </tr>
+        </table>
+      </li>
+      <li>
+        <%= form.submit t('.buy') %>
+      </li>
+    </ul>
+<% end %>
+
+
+<%= link_to t('common.back'), tickets_path, class: 'link-bt' %>

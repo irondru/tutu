@@ -1,0 +1,19 @@
+<h1><%= @railway_station.title + ' ' + @railway_station.region.to_s %></h1>
+
+<% if @railway_station.trains.present? %>
+    <table class="flat-table">
+  <thead>
+  <tr>
+    <th colspan="5"><%= t('.trains_in_station') %></th>
+  </tr>
+  </thead>
+
+  <tbody>
+    <%= render @railway_station.trains %>
+  </tbody>
+</table>
+<% end %>
+
+<%= link_to t('common.back'), admin_railway_stations_path, class: 'link-bt' %>
+<%= link_to t('common.edit'), edit_admin_railway_station_path(@railway_station), class: 'link-bt' %>
+

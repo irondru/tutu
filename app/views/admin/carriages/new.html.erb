@@ -1,0 +1,5 @@
+<h1><%= t('admin.carriages.new_carriage') %></h1>
+
+<%= render 'form', action: :create %>
+
+<%= link_to t('common.back'), admin_train_carriages_path(@train), class: 'link-bt' %>

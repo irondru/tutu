@@ -1,0 +1,6 @@
+<tr>
+  <%= render 'inline_edit_form', railway_station: railway_station %>
+  <td><%= link_to 'more_horiz', [:admin, railway_station], class: 'material-icons button edit' %>
+  <%= link_to 'edit', '', data: {id: railway_station.id}, onclick: 'return edit_station(this)', class: 'material-icons button edit' %>
+  <%= link_to 'delete', [:admin, railway_station], class: 'material-icons button delete', method: :delete, data: {confirm: t('common.confirm_del') } %></td>
+</tr>

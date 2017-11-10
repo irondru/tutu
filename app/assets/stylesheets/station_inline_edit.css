@@ -1,0 +1,18 @@
+.inline-edit-field:disabled {
+    border: none;
+    background: inherit;
+    color: inherit;
+}
+
+.inline-edit-field {
+    font: inherit;
+    background: white;
+    color: inherit;
+    padding: 8px;
+    height: 30px;
+    border: 1px solid #B0CFE0;
+}
+
+.blue-btn:disabled {
+    display: none;
+}

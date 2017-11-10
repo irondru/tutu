@@ -1,0 +1,129 @@
+ru:
+  common:
+    back: 'Назад'
+    show: 'Подробно'
+    edit: 'Изменить'
+    create: 'Создать'
+    add: 'Добавить'
+    destroy: 'Удалить'
+    confirm_del: 'Вы уверены?'
+    deleted: 'Запись удалена.'
+  layouts:
+    menu:
+      main: 'Главная'
+      exit: 'Выйти'
+      log_in: 'Войти'
+      my_tickets: 'Мои билеты'
+      stations: 'Станции'
+      routes: 'Маршруты'
+      trains: 'Поезда'
+      tickets: 'Билеты'
+  search:
+    index:
+      title: 'Поиск билетов'
+      slc_first_station: 'Откуда'
+      slc_last_station: 'Куда'
+      find_button: 'Найти билеты'
+      train: 'Поезд'
+      route: 'Маршрут'
+      departure: 'Отправление'
+      arrival: 'Прибытие'
+  admin:
+    railway_stations:
+      create_station: 'Новая станция'
+      station_title: 'Название'
+      station_region: 'Регион'
+      index:
+        title: 'Станции'
+      edit:
+        title: 'Изменить станцию'
+      show:
+        trains_in_station: 'Поезда на станции'
+        info: 'Информация'
+    routes:
+      new_route: 'Новый маршрут'
+      route_number: 'Номер'
+      index:
+        title: 'Маршруты'
+        route_title: 'Маршрут'
+      form:
+        st_tab: 'Станции'
+        sh_tab: 'Расписание'
+      form_stations_tab:
+        stations_list: 'Список станций'
+        stations_in_route: 'Станции в маршруте'
+      form_schedules_tab:
+        station: 'Станция'
+        arrival: 'Прибытие'
+        departure: 'Отправление'
+      edit:
+        title: 'Изменить маршрут'
+      show:
+        trains_in_route: 'Поезда на маршруте'
+    tickets:
+      new_ticket: 'Новый билет'
+      index:
+        title: 'Билеты'
+        email: 'Аккаунт'
+        name: 'Имя / Фамилия'
+        id: 'ID'
+      new:
+        change_train: 'Выберите поезд'
+      edit:
+        title: 'Изменить билет'
+      errors:
+        uniq: 'Начальная и конечные станции совпадают'
+    trains:
+      new_train: 'Новый поезд'
+      index:
+        title: 'Поезда'
+        train_number: 'Номер поезда'
+      train:
+        info: 'Общая информация'
+        carriages: 'Вагоны'
+      show:
+        route: 'Маршрут'
+        corrent_station: 'Текущая станция'
+        carriages: 'Вагоны'
+      form:
+        from_head: 'С головы'
+        from_tail: 'С хвоста'
+      edit:
+        title: 'Изменить поезд'
+    carriages:
+      spec_name: 'СВ'
+      economy_name: 'Плацкарт'
+      coupe_name: 'Купе'
+      sedentary_name: 'Сидячий'
+      new_carriage: 'Новый вагон'
+      index:
+        title: 'Вагоны поезда: '
+        number: 'Номер'
+        type: 'Тип'
+        bottom_places: 'Нижних мест'
+        top_places: 'Верхних мест'
+        side_bottom_places: 'Боковых нижних местх'
+        side_top_places: 'Боковых верхних мест'
+        sedentary_places: 'Сидячих мест'
+      edit:
+        title: 'Изменить вагон'
+      show:
+        title: 'Вагон'
+        type: 'Тип'
+  tickets:
+    departure: 'Станция отправления'
+    arrival: 'Станция прибытия'
+    train_number: 'Номер поезда'
+    arrival_time: 'Время прибытия'
+    departure_time: 'Время отправлеия'
+    route: 'Маршрут'
+    index:
+      title: 'Мои билеты'
+    new:
+      title: 'Покупка билета'
+      buy: 'Купить'
+    show:
+      title: 'Билет'
+      first_name: 'Имя'
+      last_name: 'Фамилия'
+      passport_number: 'Номер пасспорта'

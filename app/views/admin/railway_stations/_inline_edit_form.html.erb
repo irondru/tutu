@@ -1,0 +1,6 @@
+<%= form_for [:admin, railway_station] do |form| %>
+    <td> <%= form.text_field :title, id: :station_title, class: 'inline-edit-field', minlength: 3, maxlength: 42,
+                             disabled: true, required: true, data: {id: railway_station.id} %></td>
+    <td><%= form.text_field :region, id: :station_region, data: {id: railway_station.id}, class: 'inline-edit-field', disabled: true, maxlength: 3 %></td>
+    <td style="min-width: 182px"><%= form.submit t('common.edit'), class: 'blue-btn', data: {id: railway_station.id}, disabled: true %></td>
+<% end %>

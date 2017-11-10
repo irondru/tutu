@@ -1,0 +1,29 @@
+<div id="tab_schedules">
+  <table class="flat-table">
+    <thead>
+    <th><%= t('.station') %></th>
+    <th><%= t('.arrival') %></th>
+    <th><%= t('.departure') %></th>
+    </thead>
+    <tbody id="schedules_table">
+    <% if @route.railway_stations_routes.present? %>
+        <% @route.railway_stations_routes.each do |item| %>
+            <tr class="schedules">
+              <td><%= item.railway_station.title %></td>
+              <td>
+                <input type="datetime-local" class="date-time"  name="schedule[arrivals][]"
+                       value="<%= item.arrival %>">
+              </td>
+              <td>
+                <input type="datetime-local" class="date-time" name="schedule[departures][]"
+                       value="<%= item.departure %>">
+              </td>
+            </tr>
+        <% end %>
+    <% end %>
+    </tbody>
+  </table>
+  <% # заглушка, иначе при попытке создания пустого маршрута вывалится ошибка пермита %>
+  <input type="hidden" name="schedule[arrivals][]" >
+  <input type="hidden" name="schedule[departures][]">
+</div>

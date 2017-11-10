@@ -1,0 +1,47 @@
+<h1><%= t('.title') %></h1>
+
+<table class="flat-table">
+  <thead>
+  <tr>
+    <th><%= t('.first_name') %></th>
+    <th><%= t('.last_name') %></th>
+    <th><%= t('.passport_number') %></th>
+    <th><%= t('tickets.train_number') %></th>
+    <th colspan="2"><%= t('tickets.route') %></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr>
+    <td><%= @ticket[:first_name] %></td>
+    <td><%= @ticket[:last_name] %></td>
+    <td><%= @ticket[:passport_number] %></td>
+    <td><%= @ticket[:train_number] %></td>
+    <td><%= @ticket[:route_number] %></td>
+    <td><%= @ticket[:route_name] %></td>
+  </tr>
+  </tbody>
+</table>
+
+<table class="flat-table">
+  <thead>
+  <tr>
+    <th><%= t('tickets.departure') %></th>
+    <th><%= t('tickets.departure_time') %></th>
+    <th><%= t('tickets.arrival') %></th>
+    <th colspan="2"><%= t('tickets.arrival_time') %></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr>
+    <td><%= @ticket[:first_station_title] %></td>
+    <td><%= @ticket[:departure] %></td>
+    <td><%= @ticket[:last_station_title] %></td>
+    <td><%= @ticket[:arrival] %></td>
+    <td></td>
+  </tr>
+  </tbody>
+</table>
+
+<%= link_to t('common.back'), tickets_path, class: 'link-bt' %>

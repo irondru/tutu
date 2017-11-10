@@ -1,0 +1,29 @@
+<div id="tab_stations">
+  <table style="margin: auto">
+    <tr>
+      <td><%= t('.stations_list') %></td>
+      <td></td>
+      <td><%= t('.stations_in_route') %></td>
+    </tr>
+    <tr>
+      <td><%= select_tag '', # выпиливаем станции которые уже есть в маршруте
+                         options_from_collection_for_select(@railway_stations.select {|st|
+                           !@route.railway_stations.include?(st)}, :id, :title),
+                         {id: :sel_src, multiple: true, class: 'select select-route'} %>
+      </td>
+      <td>
+        <i id="st_add" class="material-icons button edit large"
+           onclick="render_datetime_fields('sel_src'); mov_slc('sel_src', 'sel_dst')">navigate_next</i>
+        <br><br>
+        <i id="st_del" class="material-icons button edit large"
+           onclick="delete_datetime_fields(); mov_slc('sel_dst', 'sel_src')">navigate_before</i>
+      </td>
+      </td>
+      <td>
+        <%= select_tag 'route[railway_station_ids][]',
+                       options_from_collection_for_select(@route.railway_stations, :id, :title),
+                       {id: :sel_dst, multiple: true, class: 'select select-route'} %>
+      </td>
+    </tr>
+  </table>
+</div>

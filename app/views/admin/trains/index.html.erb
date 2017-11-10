@@ -1,0 +1,19 @@
+<h1><%= t('.title') %></h1>
+
+<table class="flat-table">
+  <thead>
+    <tr>
+      <th><%= t('.train_number') %></th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @trains %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('common.back'), root_path, class: 'link-bt' %>
+

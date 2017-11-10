@@ -1,0 +1,48 @@
+ru:
+  activerecord:
+    models:
+      railway_station: 'Станция'
+      train: 'Поезд'
+      route: 'Маршрут'
+      ticket: 'Билет'
+      carriage: 'Вагон'
+    attributes:
+      railway_station:
+        title: 'Название'
+        region: 'Регион'
+      train:
+        number: 'Номер'
+        carriage_order: 'Нумерация вагонов'
+      route:
+        number: 'Номер'
+      ticket:
+        first_name: 'Имя'
+        last_name: 'Фамилия'
+        passport_number: 'Номер пасопорта'
+      carriage:
+        top_places: 'Верхних мест:'
+        bottom_places: 'Нижних мест:'
+        side_top_places: 'Боковых верхних мест:'
+        side_bottom_places: 'Боковых нижних мест:'
+        sedentary_places: 'Сидячих мест:'
+      user:
+        email: 'Почта'
+        password: 'Пароль'
+        remember_me: 'Запомнить меня'
+        password_confirmation: 'Подтверждение пароля'
+        first_name: 'Имя'
+        last_name: 'Фамилия'
+    errors:
+      models:
+        railway_station:
+          attributes:
+            title:
+              invalid: 'содержит недопустимые символы'
+            region:
+              not_a_number: 'дожен быть цифрой от 0 до 99'
+              less_than_or_equal_to: 'больше чем 99'
+              greater_than_or_equal_to: 'меньше чем 1'
+        route:
+          attributes:
+            number:
+              invalid: 'содержит недопустимые сымволы'

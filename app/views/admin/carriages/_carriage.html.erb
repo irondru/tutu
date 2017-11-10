@@ -1,0 +1,9 @@
+<% if reverse %>
+    <% @index ||= @train.carriages.count + 1 %>
+    <% @index -= 1 %>
+<% else %>
+    <% @index ||= 0 %>
+    <% @index += 1 %>
+<% end %>
+<td style="padding: 0"><%= link_to @index, admin_carriage_path(carriage),
+                                   class: 'blue-btn', style: 'width: 100%; text-align: center' %></td>

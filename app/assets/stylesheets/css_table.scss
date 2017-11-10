@@ -1,0 +1,16 @@
+.table {
+  display: table;
+  table-layout: fixed;
+
+  &_row {
+    display: table-row;
+    vertical-align: middle;
+  }
+
+  &_cell {
+    vertical-align: middle;
+    display: table-cell;
+  }
+
+}
+

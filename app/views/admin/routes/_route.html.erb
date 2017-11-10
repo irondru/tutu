@@ -1,0 +1,7 @@
+<tr>
+  <td><%= route.number %></td>
+  <td><%= route.name %></td>
+  <td><%= link_to 'more_horiz', [:admin, route], class: 'material-icons button edit' %>
+    <%= link_to 'edit', edit_admin_route_path(route), class: 'material-icons button edit' %>
+    <%= link_to 'delete', [:admin, route], class: 'material-icons button delete', method: :delete, data: {confirm: t('common.confirm_del') } %></td>
+</tr>

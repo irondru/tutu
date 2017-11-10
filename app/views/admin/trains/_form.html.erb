@@ -1,0 +1,33 @@
+<%= render 'common/errors', res: @train %>
+<%= form_for [:admin, @train], html: {class: 'form-style'} do |form| %>
+    <ul>
+      <li>
+        <table>
+          <tr>
+            <td><%= form.label :number %></td>
+            <td><%= form.label :route_id, 'Маршрут' %></td>
+            <td><%= form.label :carriage_order %></td>
+          </tr>
+          <tr>
+            <td><%= form.number_field :number, class: 'field-style', min: 1, max: 99999, required: true %></td>
+            <% # генерим список маршрутов, в обработчике onchange которого js рендрящий радиобаттоны со станциями в маршруте %>
+            <td><%= form.select :route_id, options_from_collection_for_select(@routes, :id, :number,
+                                                                              @train.route.present? ? @train.route.id : 0), {include_blank: true},
+                                {onchange: "render_stations_radiobuttons_to_train(\"#{admin_routes_path}\",
+                      #{@train.railway_station.present? ? @train.railway_station.id : 0})", id: :slc_routes, class: 'select'} %></td>
+            <td> <%= form.select :carriage_order,
+                                 options_for_select([[t('.from_head'), true], [t('.from_tail'), false]],
+                                                    @train.carriage_order), {}, {class: 'select'} %></td>
+          </tr>
+        </table>
+      </li>
+      <% # сюда будем рендерить радиобаттоны %>
+      <li>
+        <table id="route_stations">
+        </table>
+      </li>
+      <li>
+        <%= form.submit "#{@train.new_record? ? t('common.create') : t('common.edit')}" %>
+      </li>
+    </ul>
+<% end %>

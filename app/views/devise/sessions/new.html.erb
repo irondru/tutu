@@ -1,0 +1,31 @@
+<h1><%= t('.title') %></h1>
+<%= form_for resource, as: resource_name,
+             url: session_path(resource_name), html: {class: 'form-style'} do |f| %>
+    <ul>
+      <li>
+        <% #f.label :email %>
+        <%= f.email_field :email, placeholder: t('activerecord.attributes.user.email'), autofocus: true, class: 'field-style' %>
+      </li>
+      <li>
+        <% #f.label :password %>
+        <%= f.password_field :password, placeholder: t('activerecord.attributes.user.password'),
+                             autocomplete: "off", class: 'field-style' %>
+      </li>
+      <% if devise_mapping.rememberable? -%>
+          <li>
+            <table>
+              <tr>
+                <td><%= f.check_box :remember_me %></td>
+                <td><%= f.label :remember_me %></td>
+              </tr>
+            </table>
+          </li>
+      <% end -%>
+      <li>
+        <%= render "devise/shared/links" %>
+      </li>
+      <li>
+        <%= f.submit "Log in" %>
+      </li>
+    </ul>
+<% end %>

@@ -1,0 +1,33 @@
+<%= render 'common/errors', res: @ticket %>
+<%= form_for @ticket, url: {action: action}, html: {class: 'form-style'} do |form| %>
+    <ul>
+      <li>
+        <%= form.select :user_id, options_from_collection_for_select(
+        @users, :id, :email, @ticket.user.present? ? @ticket.user.id : 0), {}, {class: 'select'} %>
+        <%= form.select :train_id, options_from_collection_for_select(
+        @trains, :id, :number, @ticket.train.present? ? @ticket.train.id : 0), {include_blank: t('admin.tickets.new.change_train')},
+                    {onchange: 'render_stations_select_to_ticket()', id: :slc_trains, class: 'select'} %>
+      </li>
+      <li>
+        <select name="ticket[first_station_id]" id='slc_first_station' , class="select" hidden>
+        </select>
+        <select name="ticket[last_station_id]" id='slc_last_station' , class="select" hidden>
+        </select>
+      </li>
+      <li>
+        <%= form.label :first_name %>
+        <%= form.text_field :first_name, minlength: 3, maxlength: 25, required: true, class: 'field-style' %>
+      </li>
+      <li>
+        <%= form.label :last_name %>
+        <%= form.text_field :last_name, minlength: 3, maxlength: 25, required: true, class: 'field-style' %>
+      </li>
+      <li>
+        <%= form.label :passport_number %>
+        <%= form.number_field :passport_number, min: 0, required: true, class: 'field-style' %>
+      </li>
+      <li>
+        <%= form.submit "#{@ticket.new_record? ? t('common.create') : t('common.edit')}" %>
+      </li>
+    </ul>
+<% end %>

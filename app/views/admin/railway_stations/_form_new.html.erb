@@ -1,0 +1,21 @@
+<%= render 'common/errors', res: @railway_station %>
+<%= form_for [:admin, @railway_station], html: {class: 'form-style'} do |form| %>
+    <ul>
+      <li>
+        <table>
+          <tr>
+            <td><%= form.label :title %></td>
+            <td><%= form.label :region, class: 'label' %></td>
+          </tr>
+          <tr>
+            <td> <%= form.text_field :title,
+                                     class: 'field-style', minlength: 3, maxlength: 42, required: true %></td>
+            <td><%= form.text_field :region, class: 'field-style', maxlength: 3 %></td>
+          </tr>
+        </table>
+      </li>
+      <li>
+        <%= form.submit t('common.create') %>
+      </li>
+    </ul>
+<% end %>

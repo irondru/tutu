@@ -1,0 +1,24 @@
+<%= render 'common/errors', res: @route %>
+<div class="form-style", style="min-width: 60%">
+  <ul>
+    <div class="tab-group">
+      <div class="tab active"><a href="#tab_stations" onclick="return change_tab(this)"><%= t('.st_tab') %></a></div>
+      <div class="tab"><a href="#tab_schedules" onclick="return change_tab(this)"><%= t('.sh_tab') %></a></div>
+    </div>
+    <%= form_for [:admin, @route], html: {onsubmit: 'select_all()'} do |form| %>
+        <li>
+          <div class="tab-content">
+            <%= render 'form_stations_tab' %>
+            <%= render 'form_schedules_tab' %>
+          </div>
+        </li>
+        <li>
+          <%= form.label :number %>
+          <%= form.text_field :number, minlength: 3, maxlength: 10, required: true, class: 'field-style' %>
+        </li>
+        <li>
+          <%= form.submit "#{@route.new_record? ? t('common.create') : t('common.edit')}" %>
+        </li>
+  <% end %>
+  </ul>
+</div>

@@ -1,0 +1,29 @@
+<h1><%= @route.number.to_s %></h1>
+
+<table class="flat-table">
+  <thead>
+  <tr>
+    <th><%= t('admin.railway_stations.station_title') %></th>
+    <th colspan="2"><%= t('admin.railway_stations.station_region') %></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <%= render @route.railway_stations %>
+  </tbody>
+</table>
+
+<table class="flat-table">
+  <thead>
+  <tr>
+    <th colspan="2"><%= t('.trains_in_route') %></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <%= render @route.trains %>
+  </tbody>
+</table>
+
+<%= link_to t('common.back'), admin_routes_path, class: 'link-bt' %>
+<%= link_to t('common.edit'), edit_admin_route_path(@route), class: 'link-bt' %>

@@ -1,0 +1,7 @@
+<tr>
+  <td><%= ticket[:train_number] %></td>
+  <td><%= ticket[:first_station_title] %></td>
+  <td><%= ticket[:last_station_title] %></td>
+  <td><%= link_to 'more_horiz', ticket_path(ticket[:id]), class: 'material-icons button edit' %>
+    <%= link_to 'delete', ticket_path(ticket[:id]), class: 'material-icons button delete', method: :delete, data: {confirm: t('common.confirm_del') } %></td>
+</tr>

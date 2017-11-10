@@ -1,0 +1,691 @@
+#error_explanation {
+    color: #555;
+    border-radius: 5px;
+    font-family: Tahoma, Geneva, Arial, sans-serif;
+    font-size: 12px;
+    padding: 10px 36px;
+    margin-top: 10px;
+    background: #fbf8ee url("error_expl.png") 50% 50% repeat;
+    border: 1px solid #f5aca6;
+}
+
+#error_explanation h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px -7px 0;
+}
+
+#error_explanation ul li {
+    font-size: 12px;
+    list-style: square;
+}
+
+.field_with_errors {
+  color: red
+}
+.blue-btn {
+    -moz-box-shadow: inset 0 1px 0 0 #3985B1;
+    -webkit-box-shadow: inset 0 1px 0 0 #3985B1;
+    box-shadow: inset 0 1px 0 0 #3985B1;
+    background-color: #216288;
+    border: 1px solid #17445E;
+    display: table;
+    margin: auto;
+    cursor: pointer;
+    color: #FFFFFF;
+    padding: 8px 18px;
+    text-decoration: none;
+    font: 12px Arial, Helvetica, sans-serif;
+}
+
+.blue-btn:hover {
+    background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
+    background-color: #28739E;
+}
+
+.link-bt {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px;
+    background: #1ab188;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.link-bt:hover {
+    background: #179b77;
+}
+body {
+    font: 15px Tahoma, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+}
+
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: arial;
+}
+
+main {
+    max-width: 1100px;
+    margin: 70px auto 50px;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    height: 50px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background: #2F4773 url(/assets/header_bg-f5c8115df8681830a3eebd57479cfcea2fef82517fffa9a633757753a0358521.gif) repeat-x;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e3e3e3;
+    color: darkslategrey;
+    text-align: center;
+}
+
+h1 {
+    font-size: 140%;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    padding-top: 14px;
+    border-bottom: 1px solid #CCCCCC;
+    color: #365F91;
+    text-align: center;
+    font-family: 'Vibur', cursive;
+}
+/* line 1, /home/amd/ruby_projects/rway/app/assets/stylesheets/css_table.scss */
+.table {
+  display: table;
+  table-layout: fixed;
+}
+/* line 5, /home/amd/ruby_projects/rway/app/assets/stylesheets/css_table.scss */
+.table_row {
+  display: table-row;
+  vertical-align: middle;
+}
+/* line 10, /home/amd/ruby_projects/rway/app/assets/stylesheets/css_table.scss */
+.table_cell {
+  vertical-align: middle;
+  display: table-cell;
+}
+.flat-table {
+    line-height: 35px;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px solid #163F72;
+    width: 100%;
+    margin: 10px auto;
+    border-radius: .25rem;
+}
+
+.flat-table thead tr:first-child {
+    background: #163F72;
+    color: #fff;
+    border: none;
+}
+
+/*
+.flat-table th:first-child,
+.flat-table td:first-child {
+    padding: 0 15px 0 20px;
+}
+*/
+.flat-table th, .flat-table td {
+    padding: 0 15px 0 20px;
+}
+
+.flat-table thead tr:last-child th {
+    border-bottom: 3px solid #ddd;
+}
+
+.flat-table tbody tr:hover {
+    background-color: #f2f2f2;
+    cursor: default;
+}
+
+.flat-table tbody tr:last-child td {
+    border: none;
+}
+
+.flat-table tbody td {
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.flat-table td:last-child {
+    text-align: right;
+    padding-right: 10px;
+}
+.form-style {
+    max-width: 950px;
+    display: table;
+    background: #FAFAFA;
+    padding: 30px;
+    margin: 50px auto;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    border: 6px solid #305A72;
+}
+
+.form-style ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: auto;
+}
+
+.form-style ul li {
+    display: block;
+    margin-bottom: 10px;
+    min-height: 35px;
+}
+
+.form-style ul li .field-style {
+    margin: 0 5px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 8px;
+    outline: none;
+    height: 30px;
+    border: 1px solid #B0CFE0;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+
+}
+
+.form-style ul li .field-style:focus {
+    box-shadow: 0 0 5px #B0CFE0;
+    border: 1px solid #B0CFE0;
+}
+
+.form-style ul li .field-split {
+    width: 49%;
+}
+
+.form-style ul li .field-full {
+    width: 100%;
+}
+
+.form-style ul li input.align-left {
+    float: left;
+}
+
+.form-style ul li input.align-right {
+    float: right;
+}
+
+.form-style ul li textarea {
+    width: 100%;
+    height: 100px;
+}
+
+.form-style ul li input[type="button"],
+.form-style ul li input[type="submit"] {
+    -moz-box-shadow: inset 0 1px 0 0 #3985B1;
+    -webkit-box-shadow: inset 0 1px 0 0 #3985B1;
+    box-shadow: inset 0 1px 0 0 #3985B1;
+    background-color: #216288;
+    border: 1px solid #17445E;
+    display: table;
+    margin: auto;
+    cursor: pointer;
+    color: #FFFFFF;
+    padding: 8px 18px;
+    text-decoration: none;
+    font: 12px Arial, Helvetica, sans-serif;
+}
+
+.form-style ul li input[type="button"]:hover,
+.form-style ul li input[type="submit"]:hover {
+    background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
+    background-color: #28739E;
+}
+
+.form-style label {
+    margin-left: 5px;
+    padding: 0;
+    display: block;
+    font-weight: bold;
+}
+
+.form-style a {
+    display: block;
+    text-decoration: none;
+    color: #C6C6C6;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.form-style a:hover {
+    text-decoration: underline;
+    color: #8C918F;
+}
+.form-input {
+    height: 40px;
+    padding: 5px 7px 5px 15px;
+    background: #fff;
+    color: #666;
+    border: 2px solid #ddd;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 2px;
+}
+
+.date-time-clear {
+    background-color: inherit;
+    border: none;
+    color: black;
+    margin: 0;
+    text-align: center;
+    max-width: 165px;
+}
+
+.date-time {
+    max-width: 170px;
+}
+.main-menu {
+    padding: 0;
+    margin: 50px 0 0 0;
+    background: #BC262C url(/assets/header_menu_bg-803b9620a31e0e27b3d85d00f076cad2160ed67b3d1d806d615aca0beaf295ce.gif) repeat-x;
+    width: 100%;
+    list-style: none;
+    float: left;
+    font-size: 12px;
+}
+
+.main-menu li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.main-menu li a.root-item {
+    color: #fff;
+    font-weight: bold;
+}
+
+.main-menu a {
+    display: block;
+    padding: 0.5em 1.0em;
+    text-decoration: none;
+    text-align: center;
+}
+
+.main-menu a:hover {
+    text-decoration: underline;
+}
+
+.main-menu li:hover a.root-item {
+    background: #e26336;
+    color: #fff;
+}
+
+.main-menu li ul {
+    position: absolute;
+    padding: 0;
+    top: auto;
+    display: none;
+    z-index: 500;
+    height: auto;
+    width: 16em;
+    background: #FBFCFD;
+    border: 1px solid #C4CCD6;
+}
+
+.main-menu li li {
+    width: 100%;
+    margin: 0;
+    border-bottom: 1px solid #C4CCD6;
+}
+
+.main-menu li ul a {
+    text-align: left;
+}
+
+.main-menu li:hover {
+    background: #DAE1E9;
+    color: #fff;
+}
+
+.main-menu li:hover li:hover a {
+    color: #4F4F4F;
+}
+
+.main-menu li a {
+    color: #4F4F4F;
+    font-weight: bold;
+}
+
+.main-menu li:hover ul ul {
+    display: none;
+}
+
+.main-menu li:hover ul {
+    display: block;
+}
+/* https://material.io/icons/ */
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/material_icons-c637a00c0f6fccae993bf0f5f0ec2c8208595f027bb98c413f09ec57525e5dcc.woff2) format('woff2');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+}
+
+.button {
+    color: #aaa;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-top: -4px;
+}
+
+.large {
+    font-size: 36px;
+}
+
+.edit:hover {
+    color: #0a79df;
+}
+
+.delete:hover {
+    color: #dc2a2a;
+}
+.alert-box {
+    color: #555;
+    border-radius: 5px;
+    font-family: Tahoma, Geneva, Arial, sans-serif;
+    font-size: 12px;
+    padding: 10px 36px;
+    margin-top: 80px;
+    margin-bottom: -20px;
+}
+
+.alert {
+    background: #ffecec url(/assets/error-a8934739334da9b2c56e648759c1e686ceb4e36759b95737bcda3fb938c593ff.png) no-repeat 10px 50%;
+    border: 1px solid #f5aca6;
+}
+
+.notice {
+    background: #e9ffd9 url(/assets/success-741d0c9ee4c458066a90b03037501cc4ae811a9837fbef50680bdefbf2bc5e02.png) no-repeat 10px 50%;
+    border: 1px solid #a6ca8a;
+}
+/* line 1, /home/amd/ruby_projects/rway/app/assets/stylesheets/selects.scss */
+.select {
+  min-width: 100px;
+  height: 30px;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 0 2px 0 white;
+  border: 1px solid #B0CFE0;
+  border-radius: 2px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+/* line 12, /home/amd/ruby_projects/rway/app/assets/stylesheets/selects.scss */
+.select_expand {
+  width: 0;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 19, /home/amd/ruby_projects/rway/app/assets/stylesheets/selects.scss */
+.select_expand::after {
+  content: '\003E';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(-50%, -50%) rotate(90deg) scaleY(1.75);
+  transform: translate(-50%, -50%) rotate(90deg) scaleY(1.75);
+  color: #3e3e3e;
+  font-size: 28px;
+  pointer-events: none;
+  z-index: 2;
+  -webkit-transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
+  transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
+  opacity: .6;
+}
+/* line 35, /home/amd/ruby_projects/rway/app/assets/stylesheets/selects.scss */
+.select_expand:hover::after {
+  opacity: 1;
+}
+/* line 39, /home/amd/ruby_projects/rway/app/assets/stylesheets/selects.scss */
+.select_expand:checked::after {
+  -webkit-transform: translate(-50%, -50%) rotate(90deg) scaleX(-1) scaleY(1.75);
+  transform: translate(-50%, -50%) rotate(90deg) scaleX(-1) scaleY(1.75);
+}
+/* line 45, /home/amd/ruby_projects/rway/app/assets/stylesheets/selects.scss */
+.select_expandLabel {
+  display: block;
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+/* line 55, /home/amd/ruby_projects/rway/app/assets/stylesheets/selects.scss */
+.select_close {
+  display: none;
+}
+/* line 59, /home/amd/ruby_projects/rway/app/assets/stylesheets/selects.scss */
+.select_closeLabel {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+/* line 68, /home/amd/ruby_projects/rway/app/assets/stylesheets/selects.scss */
+.select_items {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid #2fb5d1;
+  border-radius: 2px;
+  padding-top: 40px;
+}
+/* line 78, /home/amd/ruby_projects/rway/app/assets/stylesheets/selects.scss */
+.select_input {
+  display: none;
+}
+/* line 82, /home/amd/ruby_projects/rway/app/assets/stylesheets/selects.scss */
+.select_label {
+  -webkit-transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
+  transition: all 250ms cubic-bezier(0.4, 0.25, 0.3, 1);
+  display: block;
+  height: 0;
+  font-size: 1.2rem;
+  line-height: 40px;
+  overflow: hidden;
+  color: #3e3e3e;
+  background-color: #fff;
+  cursor: pointer;
+  padding-left: 20px;
+}
+/* line 95, /home/amd/ruby_projects/rway/app/assets/stylesheets/selects.scss */
+.select_label-placeholder {
+  height: 40px;
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .6;
+  background-color: transparent;
+}
+/* line 107, /home/amd/ruby_projects/rway/app/assets/stylesheets/selects.scss */
+.select_expand:checked + .select_closeLabel {
+  display: block;
+}
+/* line 111, /home/amd/ruby_projects/rway/app/assets/stylesheets/selects.scss */
+.select_expand:checked + .select_closeLabel + .select_options .select_label {
+  height: 40px;
+}
+/* line 113, /home/amd/ruby_projects/rway/app/assets/stylesheets/selects.scss */
+.select_expand:checked + .select_closeLabel + .select_options .select_label:hover {
+  background-color: #f7f7f7;
+}
+/* line 118, /home/amd/ruby_projects/rway/app/assets/stylesheets/selects.scss */
+.select_expand:checked + .select_closeLabel + .select_options + .select_expandLabel {
+  display: none;
+}
+/* line 125, /home/amd/ruby_projects/rway/app/assets/stylesheets/selects.scss */
+.select_input:checked + .select_label {
+  height: 40px;
+  margin-top: -40px;
+}
+
+/* line 131, /home/amd/ruby_projects/rway/app/assets/stylesheets/selects.scss */
+.select-route {
+  min-width: 160px;
+  min-height: 140px;
+}
+
+/* line 136, /home/amd/ruby_projects/rway/app/assets/stylesheets/selects.scss */
+option {
+  font-size: 14px;
+}
+.inline-edit-field:disabled {
+    border: none;
+    background: inherit;
+    color: inherit;
+}
+
+.inline-edit-field {
+    font: inherit;
+    background: white;
+    color: inherit;
+    padding: 8px;
+    height: 30px;
+    border: 1px solid #B0CFE0;
+}
+
+.blue-btn:disabled {
+    display: none;
+}
+.tab-group {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.tab-group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.tab-group .tab a {
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+    background: rgba(160, 179, 176, 0.25);
+    color: #a0b3b0;
+    font-size: 14px;
+    float: left;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.tab-group .tab a:hover {
+    background: #179b77;
+    color: #ffffff;
+}
+
+.tab-group .active a {
+    background: #1ab188;
+    color: #ffffff;
+}
+
+.tab-content > div:last-child {
+    display: none;
+}
+/* line 1, /home/amd/ruby_projects/rway/app/assets/stylesheets/tmp.scss */
+.mini-table {
+  text-align: center;
+  line-height: 25px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid #163F72;
+  width: 100%;
+  margin: 10px auto;
+  border-radius: .25rem;
+}
+
+/* line 12, /home/amd/ruby_projects/rway/app/assets/stylesheets/tmp.scss */
+.mini-table thead tr {
+  background: #163F72;
+  color: #fff;
+  border: none;
+}
+
+/* line 18, /home/amd/ruby_projects/rway/app/assets/stylesheets/tmp.scss */
+.mini-table th, .flat-table td {
+  padding: 0 15px 0 20px;
+}
+
+/* line 22, /home/amd/ruby_projects/rway/app/assets/stylesheets/tmp.scss */
+.mini-table tbody td {
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+

@@ -1,0 +1,32 @@
+<h1><%= t('.title') %></h1>
+<div class="form-style" style="margin: 15px auto">
+<table>
+  <tr>
+    <td><%= select_tag 'first_station', options_from_collection_for_select(@stations, :id, :title),
+                       {include_blank: t('.slc_first_station'), id: :slc_first_station, class: 'select',
+                        onchange: 'render_rezult_table()'} %></td>
+    <td><%= image_tag 'right.png', width: 50, height: 50 %></td>
+    <td><%= select_tag 'last_station', options_from_collection_for_select(@stations, :id, :title),
+                       {include_blank: t('.slc_last_station'), id: :slc_last_station, class: 'select',
+                        onchange: 'render_rezult_table()'} %></td>
+    <td>
+      <button class="blue-btn" onclick="render_rezult_table()"><%= t('.find_button') %></button>
+    </td>
+  </tr>
+</table>
+</div>
+<table class="flat-table" id="result_table" hidden>
+  <thead>
+  <tr>
+    <th><%= t('.train') %></th>
+    <th colspan="2"><%= t('.route') %></th>
+    <th><%= t('.departure') %></th>
+    <th><%= t('.arrival') %></th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody id="found_data">
+  </tbody>
+</table>
+
+<p id="notfound" style="text-align: center"></p>

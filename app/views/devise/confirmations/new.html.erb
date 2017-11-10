@@ -1,0 +1,18 @@
+<h1><%= t('.title') %></h1>
+
+<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name),
+             html: {method: :post, class: 'form-style'}) do |f| %>
+    <ul>
+      <%= devise_error_messages! %>
+      <li>
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+      </li>
+      <li>
+        <%= render "devise/shared/links" %>
+      </li>
+      <li>
+        <%= f.submit t('.title') %>
+      </li>
+    </ul>
+<% end %>

@@ -1,0 +1,5 @@
+<p><%= @user.first_name + ' ' + @user.last_name %></p>
+<p>Вы приобрели билет на поезд <%= @ticket.train.number + ' ' + @ticket.train.route.name %> </p>
+<p>Станция отправления: <%= @ticket.first_station.title %></p>
+<p>Станция назначения: <%= @ticket.last_station.title %></p>
+<p>Посмотреть билеты можно <%= link_to 'здесь', tickets_url %></p>

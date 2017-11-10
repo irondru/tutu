@@ -1,0 +1,25 @@
+.mini-table {
+  text-align: center;
+  line-height: 25px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid #163F72;
+  width: 100%;
+  margin: 10px auto;
+  border-radius: .25rem;
+}
+
+.mini-table thead tr {
+  background: #163F72;
+  color: #fff;
+  border: none;
+}
+
+.mini-table th, .flat-table td {
+  padding: 0 15px 0 20px;
+}
+
+.mini-table tbody td {
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}

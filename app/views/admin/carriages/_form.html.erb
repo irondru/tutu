@@ -1,0 +1,44 @@
+<%= render 'common/errors', res: @carriage %>
+<%= form_for [:admin, @carriage], url: {action: action}, html: {class: 'form-style'} do |form| %>
+    <ul>
+      <% # принудительно зададим полям имена, т.к. юзаем sti и в случае ошибки валидации отрендериться уже класс-наследник %>
+      <li>
+        <%= form.select :type,
+                        options_for_select([[t('admin.carriages.economy_name'), EconomyCarriage], [t('admin.carriages.coupe_name'), CoupeCarriage],
+                                            [t('admin.carriages.spec_name'), SpecCarriage], [t('admin.carriages.sedentary_name'), SedentaryCarriage]], @carriage.type),
+                        {include_blank: false},
+                        {id: :carriage_type, onchange: 'HideFields(this)', name: 'carriage[type]', class: 'select'} %>
+      <li>
+        <table>
+          <tr>
+            <td><%= form.label :top_places %></td>
+            <td><%= form.number_field :top_places, name: 'carriage[top_places]', class: 'field-style' %></td>
+          </tr>
+          <tr>
+            <td><%= form.label :bottom_places %></td>
+            <td><%= form.number_field :bottom_places, name: 'carriage[bottom_places]', class: 'field-style' %></td>
+          </tr>
+          <tr>
+            <td><%= form.label :side_top_places %></td>
+            <td><%= form.number_field :side_top_places, name: 'carriage[side_top_places]', class: 'field-style' %></td>
+          </tr>
+          <tr>
+            <td><%= form.label :side_bottom_places %></td>
+            <td><%= form.number_field :side_bottom_places, name: 'carriage[side_bottom_places]', class: 'field-style' %></td>
+          <tr>
+            <td><%= form.label :sedentary_places %></td>
+            <td><%= form.number_field :sedentary_places, name: 'carriage[sedentary_places]', class: 'field-style' %></td>
+          </tr>
+        </table>
+      <li>
+        <%= form.submit "#{@carriage.new_record? ? t('common.create') : t('common.edit')}" %>
+      </li>
+    </ul>
+<% end %>
+
+
+<script type="text/javascript">
+    $(function () {
+        document.getElementById('carriage_type').onchange();
+    });
+</script>

@@ -1,0 +1,39 @@
+<h1>Информация о поезде</h1>
+<table class="flat-table">
+  <thead>
+  <th><%= t('admin.trains.index.train_number') %></th>
+  <th colspan="2"><%= t('.route') %></th>
+  <th><%= t('.corrent_station') %></th>
+  </thead>
+  <tbody>
+  <tr>
+    <td><%= @train.number %></td>
+    <% if @train.route.present? %>
+        <td><%= @train.route.number %></td>
+        <td><%= @train.route.name %></td>
+    <% end %>
+    <td><%= @train.railway_station.present? ? @train.railway_station.title : 'N/A' %></td>
+  </tr>
+  </tbody>
+</table>
+
+<table class="flat-table">
+  <thead>
+  <th colspan="80"><%= t('.carriages') %></th>
+  </thead>
+  <tbody>
+  <tr>
+    <% if @train.carriage_order %>
+        <%= render partial: 'admin/carriages/carriage', collection: @train.carriages,
+                   locals: {reverse: false} %>
+    <% else %>
+        <%= render partial: 'admin/carriages/carriage', collection: @train.carriages.reverse,
+                   locals: {reverse: true} %>
+    <% end %>
+  </tr>
+  </tbody>
+</table>
+
+<%= link_to t('common.back'), admin_trains_path, class: 'link-bt' %>
+<%= link_to t('common.edit'), edit_admin_train_path(@train), class: 'link-bt' %> |
+

@@ -1,0 +1,7 @@
+<tr>
+  <td><%= train.number %></td>
+  <td><%= link_to 'more_horiz', [:admin, train], class: 'material-icons button edit' %>
+    <%= link_to 'linear_scale', admin_train_carriages_path(train), class: 'material-icons button edit' %>
+    <%= link_to 'edit', edit_admin_train_path(train), class: 'material-icons button edit' %>
+    <%= link_to 'delete', [:admin, train], class: 'material-icons button delete', method: :delete, data: {confirm: t('common.confirm_del') } %></td>
+</tr>
