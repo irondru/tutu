@@ -94,8 +94,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
       address:              'localhost',
       port:                 25,
-      user_name:            'no-reply',
-      password:             'password',
-      authentication:       'plain',
-      enable_starttls_auto: true  }
+      openssl_verify_mode: 'none',
+      # в конфиге postfix запрещаем коннект из вне inet_interfaces = loopback-only
+      enable_starttls_auto: false  }
 end
